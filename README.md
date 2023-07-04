@@ -1,7 +1,7 @@
 # Animated react and tailwind navbar slider.
 A animated react and tailwindcss navbar slider component.
 
-## Getting Started with Create React App
+## Getting Started with Create React App 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
