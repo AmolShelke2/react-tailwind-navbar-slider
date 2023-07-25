@@ -6,7 +6,7 @@ const Navbar = () => {
       <div className="relative">
         <h1 className="text-xl">Animated slider</h1>
       </div>
-      <div className="">
+      <div className="relative">
         <ul className="flex justify-around px-4">
           <li className="mr-2 text-lg">Home</li>
           <li className="mr-2 text-lg">About</li>
