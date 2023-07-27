@@ -2,7 +2,6 @@
 An animated react and tailwindcss navbar slider component.
 
 ## Tech stack
-
 - React.js
 - Tailwindcss
 - animation
