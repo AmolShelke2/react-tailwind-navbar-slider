@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
   const [navBar, setNavbarActive] = useState(false);
@@ -23,20 +23,20 @@ const Navbar = () => {
             <li className="text-lg">About us</li>
           </ul>
         </div>
-        <div className="flex sm:hidden">
-          <AiOutlineMenu onClick={navbarHandler} />
+        <div className="flex sm:hidden" onClick={navbarHandler}>
+          {
+            !navBar ? <AiOutlineMenu size={30} />  : <AiOutlineClose size={30} />
+          }
         </div>
       </div>
 
       {/* Mobile navbar */}
       <div className="relative">
         <ul
-          className={`${
-            navBar
-              ? "flex-col justify-text py-4 items-center text-center cursor-pointer transition-[display] bg-teal-100"
-              : "hidden"
-          }`}>
-          <li className="mb-2 text-lg transition-[0.5s]">Home</li>
+          className={`
+          ${!navBar ? "flex flex-col justify-start items-start text-center cursor-pointer absolute left-[-100%] top-0 p-4 transition-all duration-1000 h-screen w-full" :
+              "flex flex-col justify-start p-3 items-start text-center cursor-pointer absolute left-0 bg-teal-100  transition-all duration-1000 h-[90vh] w-full"}`}>
+          <li className="mb-2 text-lg">Home</li>
           <li className="mb-2 text-lg">About</li>
           <li className="mb-2 text-lg">More info</li>
           <li className="text-lg">About us</li>
